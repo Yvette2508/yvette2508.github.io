@@ -1,0 +1,257 @@
+:root {
+    --color-primary: #EB2653;
+    --color-secondary: #54595F;
+    --color-text: #000000;
+    --color-accent: #EB2653;
+    --color-dark-gray: #363535;
+    --color-light-gray: #D7D7D7;
+    --color-brand: #EB2653;
+    --color-off-white: #FFFAFA;
+    --color-light-pink: #FFF6F6;
+}
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: var(--color-off-white);
+    color: var(--color-text);
+}
+
+/* Logo styles */
+.logo-container {
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+/* Adjust main content to account for fixed logo */
+.error-content {
+    text-align: center;
+    padding: 100px 20px 20px; /* Added top padding to account for logo */
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Rest of your existing CSS remains the same */
+.game-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+#gameArea {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    border: 2px solid var(--color-primary);
+    overflow: hidden;
+    background-color: #fff;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#score {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    color: var(--color-dark-gray);
+}
+
+.error-title {
+    font-family: "DM Serif Display", serif;
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.error-message {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+}
+
+.game-instruction {
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-dark-gray);
+}
+
+.search-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 4px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(235, 38, 83, 0.1);
+}
+
+.search-input::placeholder {
+    color: var(--color-secondary);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 150px;
+    }
+
+    .error-title {
+        font-size: 3rem;
+    }
+
+    .error-message {
+        font-size: 1.2rem;
+    }
+
+    #gameArea {
+        height: 100px;
+    }
+
+    .game-container {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 120px;
+    }
+
+    .error-title {
+        font-size: 2.5rem;
+    }
+
+    .error-message {
+        font-size: 1rem;
+    }
+
+    #gameArea {
+        height: 80px;
+    }
+
+    .search-input {
+        padding: 10px 12px;
+    }
+}
+
+/* Navigation Styles */
+.site-navigation {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.site-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-navigation > ul > li {
+    margin-bottom: 15px;
+}
+
+.site-navigation > ul > li > a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.site-navigation > ul > li > ul {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.site-navigation > ul > li > ul > li {
+    margin-bottom: 5px;
+}
+
+.site-navigation > ul > li > ul > li > a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.site-navigation a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .site-navigation {
+        padding: 0 15px;
+    }
+
+    .site-navigation > ul > li > a {
+        font-size: 1em;
+    }
+
+    .site-navigation > ul > li > ul > li > a {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-navigation {
+        padding: 0 10px;
+    }
+
+    .site-navigation > ul > li {
+        margin-bottom: 12px;
+    }
+
+    .site-navigation > ul > li > ul {
+        margin-left: 15px;
+    }
+}
