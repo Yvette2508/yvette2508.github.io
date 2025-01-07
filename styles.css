@@ -67,7 +67,7 @@ body {
 #gameArea {
     position: relative;
     width: 100%;
-    height: 120px;
+    height: 250px;
     border: 2px solid var(--color-primary);
     overflow: hidden;
     background-color: #fff;
